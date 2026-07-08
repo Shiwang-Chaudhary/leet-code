@@ -47,24 +47,30 @@ public:
             if(nums[mid] != nums[mid+1] && nums[mid] != nums[mid-1]){ 
                 return nums[mid];
             }
-            //when mid is even:
-            if(mid % 2 == 0){
-                //element is after mid
-                if(nums[mid] == nums[mid+1]){
-                    low = mid + 1;
-                }else{
-                    //element is before mid
-                    high = mid - 1;
-                }
+            // //when mid is even:
+            // if(mid % 2 == 0){
+            //     //element is after mid
+            //     if(nums[mid] == nums[mid+1]){
+            //         low = mid + 1;
+            //     }else{
+            //         //element is before mid
+            //         high = mid - 1;
+            //     }
+            // }else{
+            //     //when mid is odd:
+            //     //element is after mid
+            //     if(nums[mid] == nums[mid-1]){
+            //         low = mid + 1;
+            //     }else{
+            //         //element is somewhere before mid
+            //         high = mid - 1;
+            //     }
+            // }
+            //Or we can write it like this: (more simplified version but same logic)
+            if(mid%2 == 0 && nums[mid] == nums[mid+1] || mid%2 == 1 && nums[mid] == nums[mid-1]){
+                low = mid + 1;
             }else{
-                //when mid is odd:
-                //element is after mid
-                if(nums[mid] == nums[mid-1]){
-                    low = mid + 1;
-                }else{
-                    //element is somewhere before mid
-                    high = mid - 1;
-                }
+                high = mid-1;
             }
         }
         return -1;
