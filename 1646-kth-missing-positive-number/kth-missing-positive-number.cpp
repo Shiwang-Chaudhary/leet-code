@@ -16,13 +16,12 @@ public:
        int missing = 0;
        while(missing < k){
             if(index < n && current == nums[index]){
-                current++;
                 index++;
             }else{
                 missing++;
                 if(missing == k) return current;
-                current++;
             }
+            current++;
        }
        return current-1;
     }
