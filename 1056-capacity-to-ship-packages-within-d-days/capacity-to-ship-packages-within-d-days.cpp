@@ -64,8 +64,10 @@ public:
             int d = helperFunc(weights, mid, days);
             if(d <= days){
                 ans = mid;
+                //We have to find minimum days, so we go to left side
                 high = mid - 1;
             }else{
+                //if current mid doesnt have enough capacity then we move to higher value that means if have to go for right half.
                 low = mid + 1;
             }
         }
