@@ -19,7 +19,7 @@ public:
         // }
         // return median;
 
-
+        //Better solution: TC: O(n+m) and SC: O(n+m) due to extra array
         int i = 0;
         int j = 0;
         int n = nums1.size();
