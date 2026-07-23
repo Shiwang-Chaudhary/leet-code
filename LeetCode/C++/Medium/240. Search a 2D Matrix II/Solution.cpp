@@ -14,19 +14,36 @@ public:
         // }
         // return false;
 
+        // int row = matrix.size();
+        // int col = matrix[0].size();
+        // for(int i = 0; i < row; i++){
+        //     int low = 0, high = col-1;
+        //     while(low <= high){
+        //         int mid = low + (high - low)/2;
+        //         if(matrix[i][mid] == target){
+        //             return true;
+        //         }else if(matrix[i][mid] < target){
+        //             low = mid + 1;
+        //         }else{
+        //             high = mid - 1;
+        //         }
+        //     }
+        // }
+        // return false;
+
         int row = matrix.size();
         int col = matrix[0].size();
-        for(int i = 0; i < row; i++){
-            int low = 0, high = col-1;
-            while(low <= high){
-                int mid = low + (high - low)/2;
-                if(matrix[i][mid] == target){
-                    return true;
-                }else if(matrix[i][mid] < target){
-                    low = mid + 1;
-                }else{
-                    high = mid - 1;
-                }
+        int right = col - 1;
+        int left = 0;
+        int top = 0;
+        int bottom = row - 1;
+        while(left <= right && top <= bottom){
+            if(matrix[top][right] == target){
+                return true;
+            }else if(matrix[top][right] > target){
+                right--;
+            }else if(matrix[top][right] < target){
+                top++;
             }
         }
         return false;
