@@ -1,6 +1,7 @@
 class Solution {
 public:
     int romanToInt(string s) {
+        //Optimal solution: TC: O(n) and SC: O(1) because we are storing only 7 constants.
         int n = s.size();
         unordered_map<char,int> mp;
         int ans = 0;
