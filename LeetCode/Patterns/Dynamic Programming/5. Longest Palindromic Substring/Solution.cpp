@@ -37,7 +37,7 @@ public:
         // }
         // return s.substr(start,maxlen);
 
-        //Better solution:
+        //Optimal solution: TC: O(n^2) and SC: O(1)
         int n = s.size();
         int maxLen = 1;
         int start = 0;
@@ -47,6 +47,8 @@ public:
             int len = max(len1, len2);
             if(len > maxLen){
                 maxLen = len;
+                //Dekha tha ye formula...
+                //Finding starting index of palindrome substring using length and centre element:
                 start = i - (len-1)/2;
             }
         }
