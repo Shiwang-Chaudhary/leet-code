@@ -11,7 +11,7 @@ public:
 
     int expand(int left, int right, const string& s){
         int n = s.size();
-        while(left >= 0 && right <= n && s[left] == s[right]){
+        while(left >= 0 && right < n && s[left] == s[right]){
             left--;
             right++;
         }
