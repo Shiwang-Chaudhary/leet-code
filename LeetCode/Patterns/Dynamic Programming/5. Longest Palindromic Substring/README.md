@@ -8,8 +8,8 @@
 Two Pointers, String, Dynamic Programming, Manacher
 
 ### 🚀 Performance
-- **Runtime:** 4 ms
-- **Memory:** 9.1 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 
