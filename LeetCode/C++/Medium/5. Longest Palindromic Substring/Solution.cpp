@@ -15,13 +15,7 @@ public:
             left--;
             right++;
         }
-        if(left < 0){
-            return left + 1 + right;
-        }else if( right > n){
-            return left + right - 1;
-        }else{
-            return right - left - 1;
-        }
+        return right - left - 1;
     }
 
     string longestPalindrome(string s) {
