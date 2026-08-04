@@ -28,10 +28,11 @@ public:
         // }
         // return ans;
 
+
+        //Optimal: TC: O(n) and SC: O(1)
         int n = s.size();
         int end = n - 1;
         string ans;
-
         int i;
         for (i = n - 1; i >= 0; i--) {
             if (s[i] == ' ') {
@@ -44,11 +45,40 @@ public:
                 end = i - 1;
             }
         }
+        //For handling the first word:
         string first = s.substr(i + 1, end + 1);
         if (!first.empty()) {
             if (!ans.empty()) ans += ' ';
             ans += first;
         }
         return ans;
+
+
+        //Optimal solution 2: same tc and sc
+        //Basically reversing whole string --> reversing word to make them look correct
+        //--> removing extra space
+        // reverse(s.begin(), s.end());
+        // int n = s.size();
+        // int start = 0;
+        // while (start < n) {
+        //     while (start < n && s[start] == ' ') start++;
+        //     int end = start;
+        //     while (end < n && s[end] != ' ') end++;
+        //     reverse(s.begin() + start, s.begin() + end);
+        //     start = end;
+        // }
+        // // Remove extra spaces
+        // string ans;
+        // int i = 0;
+        // while (i < n) {
+        //     while (i < n && s[i] == ' ') i++;
+        //     if (i >= n) break;
+        //     if (!ans.empty()) ans += ' ';
+        //     while (i < n && s[i] != ' ') {
+        //         ans += s[i];
+        //         i++;
+        //     }
+        // }
+        // return ans;
     }
 };
