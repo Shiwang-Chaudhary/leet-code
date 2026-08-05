@@ -33,7 +33,7 @@ public:
         // }
         // return sum;
 
-        Optimal solution: O(n^2) and SC: O(1)
+        // Optimal solution: O(n^2) and SC: O(1)
         int n = s.size();
         int sum = 0;
         for(int i = 0; i < n; i++){
