@@ -1,39 +1,26 @@
 class Solution {
 public:
 
-    //Used for brute solution:
-    // int returnButyOfSubString(const string& s){
-    //     int n = s.size();
-    //     int minimum = INT_MAX;
-    //     int maximum = 0;
-    //     unordered_map<char,int> mp;
-    //     for(int i = 0; i < n; i++){
-    //         mp[s[i]]++;
-    //     }
-    //     for(auto it : mp){
-    //         if(it.second > maximum){
-    //             maximum = it.second;
-    //         }
-    //         if(it.second < minimum){
-    //             minimum = it.second;
-    //         }
-    //     }
-    //     return maximum - minimum;
-    // }
+    int returnButyOfSubString(const string& s){
+        int n = s.size();
+        int minimum = INT_MAX;
+        int maximum = 0;
+        unordered_map<char,int> mp;
+        for(int i = 0; i < n; i++){
+            mp[s[i]]++;
+        }
+        for(auto it : mp){
+            if(it.second > maximum){
+                maximum = it.second;
+            }
+            if(it.second < minimum){
+                minimum = it.second;
+            }
+        }
+        return maximum - minimum;
+    }
 
     int beautySum(string s) {
-        //Brute force: O(n^3) and SC: O(n)
-        // int n = s.size();
-        // int sum = 0;
-        // for(int i = 0; i < n; i++){
-        //     for(int j = i+2; j < n; j++){
-        //         string sub = s.substr(i, j - i + 1);
-        //         sum = sum + returnButyOfSubString(sub);
-        //     }
-        // }
-        // return sum;
-
-        // Optimal solution: O(n^2) and SC: O(1)
         int n = s.size();
         int sum = 0;
         for(int i = 0; i < n; i++){
