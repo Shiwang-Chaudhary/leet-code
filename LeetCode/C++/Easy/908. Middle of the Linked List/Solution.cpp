@@ -11,22 +11,33 @@
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-        ListNode* temp = head;
-        int count = 0;
-        int size = 0;
-        while(temp != nullptr){
-            size++;
-            temp = temp->next;
+        //Brute force: O(2n) and SC: O(1)
+        // ListNode* temp = head;
+        // int count = 0;
+        // int size = 0;
+        // while(temp != nullptr){
+        //     size++;
+        //     temp = temp->next;
+        // }
+        // int mid = size/2 + 1;
+        // temp = head;
+        // while(temp != nullptr){
+        //     count++;
+        //     if(count == mid){
+        //         head = temp;
+        //     }
+        //     temp = temp->next;
+        // }
+        // return head;
+
+        //Optimal approach: TC: O(n) and SCL O(1)
+        ListNode* slow = head; //moves by 1
+        ListNode* fast = head; //moves by 2
+        while(fast != nullptr && fast->next != nullptr){
+            slow = slow->next;
+            fast = fast->next->next;
         }
-        int mid = size/2 + 1;
-        temp = head;
-        while(temp != nullptr){
-            count++;
-            if(count == mid){
-                head = temp;
-            }
-            temp = temp->next;
-        }
+        head = slow;
         return head;
     }
 };
