@@ -8,7 +8,7 @@
  */
 class Solution {
 public:
-    void store(vector<ListNode*>& v, ListNode* head){
+    void store(unordered_set<ListNode*>& v, ListNode* head){
         ListNode* temp = head;
         while(temp != nullptr){
             v.push_back(temp);
@@ -24,13 +24,13 @@ public:
         return false;
     }
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-        vector<ListNode*> v;
+        unorderd_set<ListNode*> st;
         if(headA == nullptr || headB == nullptr) return nullptr;
         ListNode* temp1 = headA;
         ListNode* temp2 = headB;
         store(v, temp1);
         while(temp2 != nullptr){
-            if(exist(temp2, v)){
+            if(){
                 return temp2;
             }
             temp2 = temp2->next;
