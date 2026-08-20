@@ -11,6 +11,8 @@
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
+        //There could be different implementation of this algo but core logic is same as this one
+        //Optimal solution: TC: O(2n) and SC: O(1)
         if(head == nullptr) return head;
         ListNode* last = head;
         int size = 0;
