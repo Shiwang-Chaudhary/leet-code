@@ -12,6 +12,7 @@ class Solution {
 public:
 
     pair<ListNode*,ListNode*> reverseLL(ListNode* head){
+        //Optimal solution: TC: O(n) and SC: O(1)
         ListNode* curr = head;       
         ListNode* front = nullptr;
         ListNode* back = nullptr;
@@ -35,12 +36,14 @@ public:
         ListNode* temp = head;
         ListNode* newHead = head;
         bool firstGroup = true;
+        //pg is previous group tail
         ListNode* pgtail = nullptr;
         while(temp != nullptr){
             count++;
             if(count == k){
                 ListNode* front = temp->next;
                 temp->next = nullptr;
+                //it.first is newTail and it.second is new head
                 auto it = reverseLL(newHead);
                 if(firstGroup){
                     head = it.second;
