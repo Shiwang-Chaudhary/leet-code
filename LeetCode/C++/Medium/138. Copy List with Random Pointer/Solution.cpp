@@ -33,8 +33,8 @@ public:
         temp = head;
         Node* newTemp = dummy->next;
         while(temp != nullptr){
-            Node* randomNode = mp[temp->random];
-            newTemp->random = randomNode;
+            Node* copyRandomNode = mp[temp->random];
+            newTemp->random = copyRandomNode;
             newTemp = newTemp->next;
             temp = temp->next;
         }
