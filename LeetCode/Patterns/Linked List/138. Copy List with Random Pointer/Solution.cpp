@@ -42,6 +42,7 @@ public:
         // return dummy->next;
 
         //Optimal solution: O(n) and SC: O(1) but O(n) if we include the answer LL
+        //Watch striver's solution, it will be much clear...
         Node* temp = head;
         Node* dummy = new Node(-1);
         Node* mover = dummy;
