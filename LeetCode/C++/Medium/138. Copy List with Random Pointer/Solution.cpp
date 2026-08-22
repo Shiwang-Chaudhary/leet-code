@@ -17,6 +17,7 @@ public:
 class Solution {
 public:
     Node* copyRandomList(Node* head) {
+        //Brute solution: TC: O(2n) and SC:O(2n) (hashmap and LL) techincally only O(n) because new LL is just for answer
         Node* temp = head;
         Node* dummy = new Node(-1);
         Node* mover = dummy;
