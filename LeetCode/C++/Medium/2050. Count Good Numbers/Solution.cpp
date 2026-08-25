@@ -6,12 +6,8 @@ public:
         long long result = 0;
         if(n == 0) return 1;
         long long val = myPow(x, n/2);
-        if(n % 2 == 1){
-            result = (val * val) % MOD;
-            result = (result * x) % MOD;
-        }else{
-            result = (val * val) % MOD;
-        }
+        result = (val * val) % MOD;
+        if(n % 2 == 1) result = (result * x) % MOD;
         return result;
     }
 
