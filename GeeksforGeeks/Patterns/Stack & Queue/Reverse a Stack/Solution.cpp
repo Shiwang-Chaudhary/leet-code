@@ -13,6 +13,7 @@ class Solution {
     }
     
     void reverseStack(stack<int> &st) {
+        //Optimal solution if using recursion: O(n^2) and O(n)
         if(st.empty()) return;
         int x = st.top();
         st.pop();
