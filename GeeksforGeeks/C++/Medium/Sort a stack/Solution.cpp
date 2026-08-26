@@ -13,6 +13,7 @@ class Solution {
     }
     
     void sortStack(stack<int> &st) {
+        //Optimal solution for using recursion: TC: O(n^2) and SC: O(n)
         if(st.empty()) return;
         int x = st.top();
         st.pop();
