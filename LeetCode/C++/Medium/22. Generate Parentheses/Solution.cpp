@@ -23,6 +23,7 @@ public:
 
     vector<string> generateParenthesis(int n) {
         //Since we are generate different pattern, we caan perform backtracking
+        //Optimal solution: TC: O(Cn * n) and SC: O(Cn * n) where Cn nth catlan number (nCn bala)
         vector<string> ans;
         int open = 0;
         int close = 0;
