@@ -18,6 +18,7 @@ public:
     }
 
     vector<vector<int>> combinationSum3(int k, int n) {
+        //Optimal solution: TC: O(2^9) = O(1) | SC: O(k) auxiliary space, O(k × number of valid combinations) including output
         vector<int> nums = {1,2,3,4,5,6,7,8,9};
         vector<int> temp;
         vector<vector<int>> ans;
