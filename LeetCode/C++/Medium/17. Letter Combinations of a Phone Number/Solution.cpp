@@ -16,6 +16,7 @@ public:
     }
 
     vector<string> letterCombinations(string digits) {
+        //Optimal solution: TC: O(4^n × n) | SC: O(n) auxiliary space, O(4^n × n) including output
         vector<string> letters = {
             "", "", "abc", "def", "ghi", "jkl",
             "mno", "pqrs", "tuv", "wxyz"
