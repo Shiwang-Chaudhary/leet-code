@@ -14,6 +14,7 @@ public:
     }
 
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
         vector<vector<int>> ans;
         vector<int> temp;
         recHelper(0, temp, nums, ans);
