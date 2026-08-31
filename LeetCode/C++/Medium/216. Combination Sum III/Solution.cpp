@@ -6,14 +6,13 @@ public:
             ans.push_back(temp);
             return;
         }
-        if(sum > n) return;
-        if(index == nums.size()) return;
-        if(temp.size() > k) return;
-        int element = nums[index];
-        sum = sum + element;
-        temp.push_back(element);
+        if (sum >= n || temp.size() >= k || index == nums.size()) {
+            return;
+        }
+        sum = sum + nums[index];
+        temp.push_back(nums[index]);
         recHelper(index + 1, sum, n, k, temp, ans, nums);
-        sum = sum - element;
+        sum = sum - nums[index];
         temp.pop_back();
         recHelper(index + 1, sum, n, k, temp, ans, nums);
     }
