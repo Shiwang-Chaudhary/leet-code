@@ -14,6 +14,7 @@ public:
     }
 
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+        //Optimal solution: TC: O(n × 2^n) SC: O(n) auxiliary space and O(n × 2^n) including output because ans can contains upto 2^n elements...
         sort(nums.begin(), nums.end());
         vector<vector<int>> ans;
         vector<int> temp;
