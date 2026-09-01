@@ -1,6 +1,6 @@
 # 📝 131. Palindrome Partitioning (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/palindrome-partitioning/?utm_source=chatgpt.com)
+🔗 [Problem Link](https://leetcode.com/problems/palindrome-partitioning/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
