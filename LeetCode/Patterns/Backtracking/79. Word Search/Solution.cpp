@@ -45,6 +45,7 @@ public:
     }
 
     bool exist(vector<vector<char>>& board, string word) {
+        //Optimal solution: TC: O(M × N × 4^L) | SC: O(L) recursion stack + O(1) extra space, where M×N = board size and L = word length.
         int rows = board.size();
         int cols = board[0].size();
         for(int i = 0; i < rows; i++){
