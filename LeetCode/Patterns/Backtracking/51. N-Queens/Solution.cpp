@@ -48,6 +48,7 @@ public:
     }
 
     vector<vector<string>> solveNQueens(int n) {
+        //Optimal solution: TC: O(n² × n!) and SC: O(n²)
         vector<vector<char>> board(n, vector<char>(n,'.'));
         vector<string> temp;
         vector<vector<string>> ans;
