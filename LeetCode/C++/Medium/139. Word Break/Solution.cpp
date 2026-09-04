@@ -20,6 +20,7 @@ public:
     }
 
     bool wordBreak(string s, vector<string>& wordDict) {
+        //Brute force: TC: O(2^n * n * m) and SC: O(n + m), where m is the wordDict size...
         return recHelper(0, s, wordDict);
     }
 };
