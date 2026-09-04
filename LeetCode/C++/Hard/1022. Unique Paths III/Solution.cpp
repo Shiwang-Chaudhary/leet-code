@@ -48,6 +48,7 @@ public:
     }
 
     int uniquePathsIII(vector<vector<int>>& grid) {
+        //Optimal solution: TC: O(3^(R×C)) | SC: O(R×C) 
         //row,col
         pair<int,int> start = {0,0};
         int rs = grid.size();
