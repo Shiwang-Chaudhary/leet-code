@@ -46,7 +46,8 @@ public:
             }
         }
     }
-
+    //This is not the optimal solution but chatgpt says its enough for interview
+    //Optima solution TC: O(n!) and SC: O(s * n^2) where s is number of valid N queen solutions
     vector<vector<string>> solveNQueens(int n) {
         //Less optimal solurion: TC: O(N*N!) and SC: O(N^2)... but good for interview
         vector<vector<char>> board(n, vector<char>(n,'.'));
