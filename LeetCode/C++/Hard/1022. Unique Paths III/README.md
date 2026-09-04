@@ -8,8 +8,8 @@
 Array, Backtracking, Bit Manipulation, Matrix, Hamiltonian Path
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 0 ms
+- **Memory:** 9.2 MB
 
 ---
 
