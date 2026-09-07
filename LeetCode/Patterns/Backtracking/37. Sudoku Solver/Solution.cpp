@@ -40,7 +40,8 @@ public:
                             board[row][col] = '.';
                         }
                     }
-                    //means '.' cant have valid choice with [1,9] and that is only possible when we made wrong choices in previous recursion so we backtrack
+                    // '.' has no valid choice from [1,9], which means our
+                    // previous choices led to an invalid state, so we backtrack.
                     return false;
                 }
             }
