@@ -50,6 +50,7 @@ public:
     }
 
     void solveSudoku(vector<vector<char>>& board) {
+        //Optimal solution: TC: O(9^81) and SC: O(81).
         recHelper(0, board);
     }
 };
