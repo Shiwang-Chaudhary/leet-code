@@ -1,6 +1,6 @@
 # 📝 231. Power of Two (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/power-of-two/)
+🔗 [Problem Link](https://leetcode.com/problems/power-of-two)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
