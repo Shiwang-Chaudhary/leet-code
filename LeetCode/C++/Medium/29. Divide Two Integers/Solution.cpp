@@ -1,24 +1,23 @@
 class Solution {
 public:
     int divide(int dividend, int divisor) {
+        // Brute force: TC: O(|dividend| / |divisor|), SC: O(1)        
         int i = 0;
-        int sum = 0;
+        long long sum = 0;
+        bool negative = (dividend < 0) ^ (divisor < 0);
         long long dividendDummy = dividend;
         long long divisorDummy = divisor;
+
         if(dividendDummy < 0){
             dividendDummy = -dividendDummy;
         }
         if(divisorDummy < 0){
             divisorDummy = -divisorDummy;
         }
-        while(sum + divisorDummy < dividendDummy){
+        while(sum + divisorDummy <= dividendDummy){
             i++;
-            sum = sum + 3;
+            sum = sum + divisorDummy;
         }
-        if(dividend < 0 || divisor < 0){
-            return -i;
-        }
-        if(dividend < 0 && divisor < 0) return i;
-        return i;
+       return negative ? -i : i;
     }
 };
