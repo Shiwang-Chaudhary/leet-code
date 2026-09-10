@@ -1,7 +1,7 @@
 class Solution {
 public:
     int divide(int dividend, int divisor) {
-        // Brute force: TC: O(|dividend| / |divisor|), SC: O(1)        
+        // Brute force: TC: O(|dividend|), SC: O(1)        
         long long i = 0;
         long long sum = 0;
         bool negative = (dividend < 0) ^ (divisor < 0);
