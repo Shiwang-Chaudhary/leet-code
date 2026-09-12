@@ -20,7 +20,7 @@ public:
     //     }
     //    return negative ? -i : i;
 
-        //Optimal solution: TC: O(log(dividend)) and SC: O(1)
+        //Optimal solution: Bit Manipulation — TC: O(log |dividend|), SC: O(1)
         if (dividend == INT_MIN && divisor == -1) return INT_MAX;
         long long sum = 0;
         long long i = 0;
