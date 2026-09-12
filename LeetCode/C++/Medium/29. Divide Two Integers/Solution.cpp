@@ -21,8 +21,7 @@ public:
     //    return negative ? -i : i;
 
         //Optimal solution: TC: O(log(dividend)) and SC: O(1)
-        if (dividend == INT_MIN && divisor == -1)
-    return INT_MAX;
+        if (dividend == INT_MIN && divisor == -1) return INT_MAX;
         long long sum = 0;
         long long i = 0;
         bool isNegative = (dividend < 0) ^ (divisor < 0);
