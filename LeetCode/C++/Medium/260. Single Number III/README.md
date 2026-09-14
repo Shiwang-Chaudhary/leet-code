@@ -1,6 +1,6 @@
 # 📝 260. Single Number III (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/single-number-iii/?utm_source=chatgpt.com)
+🔗 [Problem Link](https://leetcode.com/problems/single-number-iii/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
