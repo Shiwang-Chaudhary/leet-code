@@ -1,6 +1,6 @@
 # 📝 204. Count Primes (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/count-primes/solutions/)
+🔗 [Problem Link](https://leetcode.com/problems/count-primes/solutions/8517951/easist-approach-to-this-by-yuvrajvashist-ee6a/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
@@ -8,7 +8,7 @@
 Array, Math, Enumeration, Number Theory, Primality Test, Sieve Theory, Prime Number Sieve
 
 ### 🚀 Performance
-- **Runtime:** Successfully Evaluated
+- **Runtime:** N/A
 - **Memory:** N/A
 
 ---
