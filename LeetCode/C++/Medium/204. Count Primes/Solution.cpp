@@ -24,9 +24,9 @@ public:
         isPrime[0] = 0; // 0 is not prime
         isPrime[1] = 0; // 1 is not prime as well
         //we dont actually need to go till n, only till its square root, reason is in excalidraw file
-        for(int i = 2; i*i <= n; i++){
+        for(int i = 2; i*i < n; i++){
             if(isPrime[i]){
-                for(int j = i*i; j <= n; j = j + i){
+                for(int j = i*i; j < n; j = j + i){
                     //j will be composite numbers because they are multiples of i, so mark them composite
                     isPrime[j] = 0;
                 }
