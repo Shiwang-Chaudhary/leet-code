@@ -10,11 +10,11 @@ public:
     }
 
     int countPrimes(int n) {
-        //Brute force:
+        //Brute force: TC: O(n√n) and SC: O(1)
         int count = 0;
-        for(int i = 1; i <= n; i++){
+        for(int i = 1; i < n; i++){
             if(isPrime(i)) count++;
         }
-        return count++;
+        return count;
     }
 };
