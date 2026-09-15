@@ -17,6 +17,6 @@ public:
         // }
         // return count;
 
-        //Optimal solution using
+        //Optimal solution using Sieve of Eratosthenes
     }
 };
