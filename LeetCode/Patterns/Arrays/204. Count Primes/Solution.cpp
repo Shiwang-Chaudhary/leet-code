@@ -20,7 +20,7 @@ public:
         //Optimal solution using Sieve of Eratosthenes: TC: O(nlog(logn)) and SC: O(k) where k is number of prime numbers
         //mark all numbers as prime initially
         if(n == 0 || n == 1) return 0;
-        vector<int> isPrime(n+1, 1);
+        vector<int> isPrime(n, 1);
         isPrime[0] = 0; // 0 is not prime
         isPrime[1] = 0; // 1 is not prime as well
         //we dont actually need to go till n, only till its square root, reason is in excalidraw file
