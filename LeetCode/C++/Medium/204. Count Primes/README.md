@@ -1,6 +1,6 @@
 # 📝 204. Count Primes (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/count-primes/solutions/)
+🔗 [Problem Link](https://leetcode.com/problems/count-primes/solutions/5567554/basic-and-modified-sieve-of-eratosthenes-xes5/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
