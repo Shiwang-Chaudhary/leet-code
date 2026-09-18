@@ -8,6 +8,7 @@ public:
     
     void push(int x) {
         //Approach 1: Costly push....
+        //T
         while(!s1.empty()){
             s2.push(s1.top());
             s1.pop();
