@@ -4,6 +4,7 @@ public:
     MyStack() {}
     
     void push(int x) {
+        //TC: O(n) where n is the size of queue
         q.push(x);
         int size = q.size();
         for(int i = 0; i < size - 1; i++){
