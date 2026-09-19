@@ -8,7 +8,7 @@ public:
     }
     
     void push(int x) {
-        //Approach 1: Costly push....
+        //Approach 1: Costly push...
         //TC: O(2n) where n is the current size of stack
         //SC: 2 dynamic stacks
         // while(!s1.empty()){
