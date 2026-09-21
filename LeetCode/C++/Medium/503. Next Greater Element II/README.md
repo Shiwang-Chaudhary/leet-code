@@ -8,8 +8,8 @@
 Array, Stack, Monotonic Stack
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 6 ms
+- **Memory:** 28.4 MB
 
 ---
 
