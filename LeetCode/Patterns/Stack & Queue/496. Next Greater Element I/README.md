@@ -1,6 +1,6 @@
 # 📝 496. Next Greater Element I (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/next-greater-element-i/?utm_source=chatgpt.com)
+🔗 [Problem Link](https://leetcode.com/problems/next-greater-element-i/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
@@ -8,8 +8,8 @@
 Array, Hash Table, Stack, Monotonic Stack
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 6 ms
+- **Memory:** 12.3 MB
 
 ---
 
