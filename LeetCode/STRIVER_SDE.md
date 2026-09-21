@@ -3,7 +3,7 @@
 Track your progress on the Striver's SDE Sheet top interview problems.
 
 ## Progress
-- **Completed:** 9 / 76 (11.8%)
+- **Completed:** 10 / 76 (13.2%)
 
 ---
 
@@ -63,7 +63,7 @@ Track your progress on the Striver's SDE Sheet top interview problems.
 
 ### 📂 Stack & Queue
 - [ ] Valid Parentheses
-- [ ] Next Greater Element I
+- [x] [Next Greater Element I](./C++/Easy/496. Next Greater Element I/)
 - [x] [Next Greater Element II](./C++/Medium/503. Next Greater Element II/)
 - [ ] Largest Rectangle in Histogram
 - [ ] Sliding Window Maximum
