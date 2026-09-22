@@ -1,6 +1,7 @@
 class Solution {
 public:
     vector<int> asteroidCollision(vector<int>& a) {
+        //Optimal solution: TC: O(n) and SC: O(n) 
         int n = a.size();
         stack<int> st;
         st.push(a[0]);
