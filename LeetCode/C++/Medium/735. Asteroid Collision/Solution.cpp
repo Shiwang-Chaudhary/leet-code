@@ -5,7 +5,8 @@ public:
         stack<int> st;
         st.push(a[0]);
         for(int i = 1; i < n; i++){
-            int alive = true;
+            //if alive is true keep the next element otherwise dont
+            bool alive = true;
             //current element and next element
             while(!st.empty() && st.top() > 0 && a[i] < 0){
                 int ce = st.top(); //current element

@@ -1,6 +1,6 @@
 # 📝 735. Asteroid Collision (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/asteroid-collision/?utm_source=chatgpt.com)
+🔗 [Problem Link](https://leetcode.com/problems/asteroid-collision/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
