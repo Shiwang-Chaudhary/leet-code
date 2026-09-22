@@ -8,7 +8,7 @@
 Array, Stack, Simulation
 
 ### 🚀 Performance
-- **Runtime:** 4 ms
+- **Runtime:** 0 ms
 - **Memory:** 21.9 MB
 
 ---
