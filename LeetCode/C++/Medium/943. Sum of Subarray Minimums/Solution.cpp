@@ -4,7 +4,7 @@ public:
     int recHelper(int index, int minimum, vector<int>& nums){
         if(index == nums.size()) return 0;
         minimum = min(minimum, nums[index]);
-        return minimum + recHelper(index + 1, minimum, sum, nums);
+        return minimum + recHelper(index + 1, minimum, nums);
     }
 
     int sumSubarrayMins(vector<int>& arr) {
