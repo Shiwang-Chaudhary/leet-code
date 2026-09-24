@@ -1,6 +1,6 @@
 # 📝 907. Sum of Subarray Minimums (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/sum-of-subarray-minimums/)
+🔗 [Problem Link](https://leetcode.com/problems/sum-of-subarray-minimums)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
