@@ -9,11 +9,9 @@ public:
 
     int sumSubarrayMins(vector<int>& arr) {
         long long sum = 0;
-
         for(int i = 0; i < arr.size(); i++) {
             sum += recHelper(i, arr[i], arr);
         }
-
         return sum % (1000000007);
     }
 };
