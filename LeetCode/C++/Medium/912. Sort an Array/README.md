@@ -1,6 +1,6 @@
 # 📝 912. Sort an Array (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/sort-an-array/?utm_source=chatgpt.com)
+🔗 [Problem Link](https://leetcode.com/problems/sort-an-array)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
