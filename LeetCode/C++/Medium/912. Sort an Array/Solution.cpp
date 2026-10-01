@@ -2,6 +2,8 @@ class Solution {
 public:
 
     int partition(vector<int>& nums, int start, int end){
+        int randomIndex = start + rand() % (end - start + 1);
+    swap(nums[randomIndex], nums[end]);
         //pivot index
         int index = start - 1;
         //pivot element
