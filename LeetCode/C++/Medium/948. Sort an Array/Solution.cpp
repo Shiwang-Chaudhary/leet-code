@@ -2,7 +2,7 @@ class Solution {
 public:
 
     int partition(vector<int>& nums, int start, int end){
-        //for this question we need to randomized the last element to avoid worst case scenerio in most cases
+        //for this question we need to randomized the last element to avoid worst case scenerio in most cases in quick sort
         int randomIndex = start + rand() % (end - start + 1);
         swap(nums[randomIndex], nums[end]);
         //pivot index
