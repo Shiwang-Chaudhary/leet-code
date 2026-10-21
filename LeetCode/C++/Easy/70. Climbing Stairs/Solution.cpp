@@ -1,6 +1,7 @@
 class Solution {
 public:
 
+    //Memoization approach: TC: O(n) and SC: O(n)[recursion stack]
     int solve(int n, vector<int>& dp){
         if(n <= 2) return n;
         if(dp[n] != -1) return dp[n];
