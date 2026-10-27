@@ -28,28 +28,16 @@ public:
         return dp[index];
     }
 
-    int tabulation(vector<int>& nums){
-        int n = nums.size();
-        vector<int> dp(n, -1);
-        dp[0] = nums[0];
-        dp[1] = max(nums[1], dp[0]); //means for rob = dp[i-2](which is -1) + nums[i] and skip = dp[0]
-        for(int i = 2; i < n; i++){
-            int rob = nums[i] + dp[i-2];
-            int skip = 0 + dp[i-1];
-            dp[i] = max(rob, skip);
-        }
-        return dp[n-1]; //means maxmoney from 0 to last index with non continous indexes
-    }
+    // int tabulation(vector<int>& nums){
+    //     vector<int> dp(n, -1);
+    // }
 
     int rob(vector<int>& nums) {
         //Method 1: Recursion: TC: O(2^n) and SC: O(n) [Recursion stack]
         // return recursion(0, nums);
 
         //Method 2: Memoization: TC: O(n) and SC: O(n) [Recursion stack]
-        // vector<int> dp(nums.size(), -1);
-        // return memoization(0, dp, nums);
-
-        //Method 3: Tabulation: TC: O(n) and SC: O(n) [Dp array]
-        return tabulation(nums);
+        vector<int> dp(nums.size(), -1);
+        return memoization(0, dp, nums);
     }
 };
