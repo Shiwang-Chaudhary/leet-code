@@ -42,6 +42,22 @@ public:
         return dp[n-1]; //means maxmoney from 0 to last index with non continous indexes
     }
 
+    int optimization(vector<int>& nums){
+        int n = nums.size();
+        if(n == 1) return nums[0];
+        int p2 = nums[0];
+        int p1 = max(nums[1], p2);
+        int current = 0;
+        for(int i = 2; i < n; i++){
+            int rob = p2 + nums[i];
+            int skip = p1;
+            current = max(rob, skip);
+            p2 = p1;
+            p1 = current;
+        }
+        return p1;
+    }
+
     int rob(vector<int>& nums) {
         //Method 1: Recursion: TC: O(2^n) and SC: O(n) [Recursion stack]
         // return recursion(0, nums);
@@ -51,6 +67,9 @@ public:
         // return memoization(0, dp, nums);
 
         //Method 3: Tabulation: TC: O(n) and SC: O(n) [Dp array]
-        return tabulation(nums);
+        // return tabulation(nums);
+
+        //Method 4: Optimization: TC: O(n) and SC: O(1) 
+        return optimization(nums);
     }
 };
