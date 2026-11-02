@@ -28,7 +28,7 @@ public:
 
         //Method 2: Memoization: TC: O(n) and SC: O(n) + O(n)[Recursion stack and Dp array]
         int n = nums.size();
-        if)
+        if(n == 1) return nums[0];
         //DP arrays must be different because both cases have different starting and ending points
         vector<int> dp1(n, -1); // for case 1 (ask chatgpt)
         vector<int> dp2(n, -1); // for case 2 (ask chatgpt)        
