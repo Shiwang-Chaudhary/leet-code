@@ -1,6 +1,6 @@
 # 📝 213. House Robber II (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/house-robber-ii/)
+🔗 [Problem Link](https://leetcode.com/problems/house-robber-ii)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
