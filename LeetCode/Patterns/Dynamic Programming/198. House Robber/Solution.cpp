@@ -20,10 +20,10 @@ public:
     }
 
     int memoization(int index, vector<int>&dp, vector<int>& nums){
-        if(index >= nums.size()) return 0;
+        if(index < 0) return 0;
         if(dp[index] != -1) return dp[index];
-        int rob =  nums[index] + memoization(index + 2, dp, nums);
-        int skip = 0 + memoization(index + 1, dp, nums);
+        int rob = nums[index] + memoization(index - 2, dp, nums);
+        int skip = 0 + memoization(index - 1, dp, nums);
         dp[index] = max(rob, skip);
         return dp[index];
     }
@@ -63,13 +63,14 @@ public:
         // return recursion(0, nums);
 
         //Method 2: Memoization: TC: O(n) and SC: O(n) [Recursion stack]
-        // vector<int> dp(nums.size(), -1);
-        // return memoization(0, dp, nums);
+        int n = nums.size();
+        vector<int> dp(nums.size(), -1);
+        return memoization(n-1, dp, nums);
 
         //Method 3: Tabulation: TC: O(n) and SC: O(n) [Dp array]
         // return tabulation(nums);
 
         //Method 4: Optimization: TC: O(n) and SC: O(1) 
-        return optimization(nums);
+        // return optimization(nums);
     }
 };
