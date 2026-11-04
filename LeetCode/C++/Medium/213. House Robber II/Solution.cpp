@@ -18,6 +18,28 @@ public:
     }
 
     int tabulation(int start, int end, vector<int>& nums){
+        // int n = nums.size();
+        // vector<int> dp1(n, -1);
+        // vector<int> dp2(n, -1);
+        // if(start == 0 && end == n-2){
+        //     dp1[0] = nums[0];
+        //     dp1[1] = max(dp1[0], nums[1]);
+        //     for(int i = start + 2; i <= end; i++){
+        //         int rob = nums[i] + dp1[i-2];
+        //         int skip = 0 + dp1[i-1];
+        //         dp1[i] = max(rob, skip);
+        //     }
+        //     return dp1[n-2];
+        // }else{
+        //     dp2[0] = 0;
+        //     dp2[1] = nums[1];
+        //     for(int i = start + 1; i <= end; i++){
+        //         int rob = nums[i] + dp2[i-2];
+        //         int skip = 0 + dp2[i-1];
+        //         dp2[i] = max(rob, skip);
+        //     }
+        //     return dp2[n-1];
+        // }
         int n = nums.size();
         vector<int>dp(n, -1);
         dp[start] = nums[start];
@@ -28,22 +50,6 @@ public:
             dp[i] = max(rob, skip);
         }
         return dp[end];
-    }
-
-    int optimized(int start, int end, vector<int>& nums){
-        int n = nums.size();
-        int prev1 = 0;
-        int prev2 = nums[start];
-        int current = 0;
-        if(start+1 <= end) prev1 = max(nums[start+1], prev2);
-        for(int i = start + 2; i <= end; i++){
-            int rob = nums[i] + prev2;
-            int skip = 0 + prev1;
-            current = max(rob, skip);
-            prev2 = prev1;
-            prev1 = current;
-        }
-        return prev1;
     }
 
     int rob(vector<int>& nums) {
@@ -68,17 +74,10 @@ public:
         // return max(case1, case2);
 
         //Method 3: Tabulation:
-        // int n = nums.size();
-        // if(n == 1) return nums[0];
-        // int case1 = tabulation(0, n-2, nums);
-        // int case2 = tabulation(1, n-1, nums);
-        // return max(case1, case2);
-
-        //Method 4: Optimized Tabulation: 
         int n = nums.size();
         if(n == 1) return nums[0];
-        int case1 = optimized(0, n-2, nums);
-        int case2 = optimized(1, n-1, nums);
+        int case1 = tabulation(0, n-2, nums);
+        int case2 = tabulation(1, n-1, nums);
         return max(case1, case2);
     }
 };
