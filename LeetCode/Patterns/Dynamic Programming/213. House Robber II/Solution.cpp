@@ -68,14 +68,14 @@ public:
         // int case2 = memoization(n-2, 0, dp2, nums);
         // return max(case1, case2);
 
-        //Method 3: Tabulation:
+        //Method 3: Tabulation: TC: O(n) and SC: O(n) [Dp array]
         // int n = nums.size();
         // if(n == 1) return nums[0];
         // int case1 = tabulation(0, n-2, nums);
         // int case2 = tabulation(1, n-1, nums);
         // return max(case1, case2);
 
-        //Method 4: Optimized Tabulation: 
+        //Method 4: Optimized Tabulation: TC: O(n) and SC: O(1)
         int n = nums.size();
         if(n == 1) return nums[0];
         int case1 = optimized(0, n-2, nums);
