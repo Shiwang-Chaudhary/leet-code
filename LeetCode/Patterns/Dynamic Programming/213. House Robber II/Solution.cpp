@@ -18,28 +18,38 @@ public:
     }
 
     int tabulation(int start, int end, vector<int>& nums){
+        // int n = nums.size();
+        // vector<int> dp1(n, -1);
+        // vector<int> dp2(n, -1);
+        // if(start == 0 && end == n-2){
+        //     dp1[0] = nums[0];
+        //     dp1[1] = max(dp1[0], nums[1]);
+        //     for(int i = start + 2; i <= end; i++){
+        //         int rob = nums[i] + dp1[i-2];
+        //         int skip = 0 + dp1[i-1];
+        //         dp1[i] = max(rob, skip);
+        //     }
+        //     return dp1[n-2];
+        // }else{
+        //     dp2[0] = 0;
+        //     dp2[1] = nums[1];
+        //     for(int i = start + 1; i <= end; i++){
+        //         int rob = nums[i] + dp2[i-2];
+        //         int skip = 0 + dp2[i-1];
+        //         dp2[i] = max(rob, skip);
+        //     }
+        //     return dp2[n-1];
+        // }
         int n = nums.size();
-        vector<int> dp1(n, -1);
-        vector<int> dp2(n, -1);
-        if(start == 0 && end == n-2){
-            dp1[0] = nums[0];
-            dp1[1] = max(dp1[0], nums[1]);
-            for(int i = start + 2; i <= end; i++){
-                int rob = nums[i] + dp1[i-2];
-                int skip = 0 + dp1[i-1];
-                dp1[i] = max(rob, skip);
-            }
-            return dp1[n-2];
-        }else{
-            dp2[0] = 0;
-            dp2[1] = nums[1];
-            for(int i = start + 1; i <= end; i++){
-                int rob = nums[i] + dp2[i-2];
-                int skip = 0 + dp2[i-1];
-                dp2[i] = max(rob, skip);
-            }
-            return dp2[n-1];
+        vector<int>dp(n, -1);
+        dp[start] = nums[start];
+        dp[start+1] = max(dp[start], nums[start + 1]);
+        for(int i = start + 2; i <= end; i++){
+            int rob = nums[i] + dp[i-2];
+            int skip = 0 + dp[i-1];
+            dp[i] = max(rob, skip);
         }
+        return dp[end];
     }
 
     int rob(vector<int>& nums) {
