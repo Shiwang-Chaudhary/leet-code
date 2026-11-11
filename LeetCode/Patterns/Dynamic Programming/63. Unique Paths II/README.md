@@ -23,7 +23,7 @@ Return  *the number of possible unique paths that the robot can take to reach th
 
 The testcases are generated so that the answer will be less than or equal to  `2 * 109` .
 
-OriginalC++ **Example 1:**
+**Example 1:**
 
  ![image](https://assets.leetcode.com/uploads/2020/11/04/robot1.jpg) 
 
