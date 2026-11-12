@@ -27,7 +27,7 @@ public:
     int tabulation(vector<vector<int>>& obstacleGrid){
         int row = obstacleGrid.size();
         int col = obstacleGrid[0].size();
-        if(obstacleGrid[0][0] == 1) return 0;
+        if(obstacleGrid[0][0] == 1) return 0;//if starting index has osbtacle
         vector<vector<int>>dp(row, vector<int>(col, 0));
         dp[0][0] = 1; //if(row==0 && col == 0) return 1 bala case
         for(int i = 0; i < row; i++){
@@ -44,6 +44,30 @@ public:
         return dp[row-1][col-1];
     }
 
+    int optimization(vector<vector<int>>& obstacleGrid){
+        int row = obstacleGrid.size();
+        int col = obstacleGrid[0].size();
+        if(obstacleGrid[0][0] == 1) return 0; //if starting index has osbtacle
+        vector<int>prev(col, 0);
+        for(int i = 0; i < row; i++){
+            vector<int>curr(col, 0);
+            for(int j = 0; j < col; j++){
+                if(i == 0 && j == 0){
+                    curr[j] = 1;
+                    continue;
+                }
+                int left = 0;
+                int top = 0;
+                if(obstacleGrid[i][j] == 1) continue;
+                if(j > 0) left = curr[j-1];
+                if(i > 0) top = prev[j];
+                curr[j] = left + top;
+            }
+            prev = curr;
+        }
+        return prev[col-1];
+    }
+
     int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
         int row = obstacleGrid.size();
         int col = obstacleGrid[0].size();
@@ -55,6 +79,9 @@ public:
         // vector<vector<int>>dp(row, vector<int>(col, 0));
         // return memoization(row-1, col-1, obstacleGrid, dp);
 
-        return tabulation(obstacleGrid);
+        //Method 3: Tabulation: TC: O(m x n) and SC: O(mxn)
+        // return tabulation(obstacleGrid);
+
+        return optimization(obstacleGrid);
     }
 };
