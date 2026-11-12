@@ -15,8 +15,8 @@ public:
         if(dp[r][c] != INT_MAX) return dp[r][c];
         int up = INT_MAX;
         int upLeft = INT_MAX;
-        if(c > 0) upLeft = triangle[r][c] + recursion(r-1, c-1, triangle);
-        if(c < triangle[r-1].size()) up = triangle[r][c] + recursion(r-1, c, triangle);
+        if(c > 0) upLeft = triangle[r][c] + memoization(r-1, c-1, triangle, dp);
+        if(c < triangle[r-1].size()) up = triangle[r][c] + memoization(r-1, c, triangle, dp);
         return dp[r][c] = min(upLeft, up);
     }
 
