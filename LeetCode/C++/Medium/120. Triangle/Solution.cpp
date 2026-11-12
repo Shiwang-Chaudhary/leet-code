@@ -20,6 +20,31 @@ public:
         return dp[r][c] = min(upLeft, up);
     }
 
+    long tabulation(vector<vector<int>>& triangle){
+        int row = triangle.size();
+        int col = triangle[row-1].size();
+        vector<vector<long>>dp(row, vector<long>(col, INT_MAX));
+        for(int i = 0; i < row; i++){
+            int rcol = triangle[i].size();
+            for(int j = 0; j < rcol; j++){
+                if(i == 0){
+                    dp[0][0] = triangle[0][0];
+                    continue;
+                }
+                int up = INT_MAX;
+                int upLeft = INT_MAX;
+                if(j > 0) upLeft = triangle[i][j] + dp[i-1][j-1];
+                if(j < triangle[i-1].size()) up = triangle[i][j] + dp[i-1][j];
+                dp[i][j] = min(upLeft, up);
+            }
+        }
+        long minans = INT_MAX;
+        for(int i = 0; i < col; i++){
+            minans = min(minans, dp[row-1][i]);
+        }
+        return minans;
+    }
+
     int minimumTotal(vector<vector<int>>& triangle) {
         int row = triangle.size();
         int col = triangle[row-1].size();
@@ -30,11 +55,14 @@ public:
         // }
         // return minans;
 
-        vector<vector<long>>dp(row, vector<long>(col, INT_MAX));
-        long minans = INT_MAX;
-        for(int i = 0; i < col; i++){
-            minans = min(minans, memoization(row-1, i, triangle, dp));
-        }
-        return minans;
+        //Method 2: Memoization: TC: O(nxm) and SCL O(m) + O(nxm)
+        // vector<vector<long>>dp(row, vector<long>(col, INT_MAX));
+        // long minans = INT_MAX;
+        // for(int i = 0; i < col; i++){
+        //     minans = min(minans, memoization(row-1, i, triangle, dp));
+        // }
+        // return minans;
+
+        return tabulation(triangle);
     }
 };
