@@ -77,6 +77,7 @@ public:
 
         //Method 2: Memoization: TC: O(m x n) and SC: O(m) + O(mxn)
         // vector<vector<int>>dp(row, vector<int>(col, 0));
+        // //we must send rowindex and colindex instead of number of rows and cols
         // return memoization(row-1, col-1, obstacleGrid, dp);
 
         //Method 3: Tabulation: TC: O(m x n) and SC: O(mxn)
