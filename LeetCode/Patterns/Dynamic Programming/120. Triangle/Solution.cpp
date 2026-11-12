@@ -45,6 +45,33 @@ public:
         return minans;
     }
 
+    long optimization(vector<vector<int>>& triangle){
+        int row = triangle.size();
+        int col = triangle[row-1].size();
+        vector<long>prev(col, INT_MAX);
+        for(int i = 0; i < row; i++){
+            int rcol = triangle[i].size();
+            vector<long>curr(rcol, INT_MAX);
+            for(int j = 0; j < rcol; j++){
+                if(i == 0){
+                    curr[0] = triangle[0][0];
+                    continue;
+                }
+                int up = INT_MAX;
+                int upLeft = INT_MAX;
+                if(j > 0) upLeft = triangle[i][j] + prev[j-1];
+                if(j < triangle[i-1].size()) up = triangle[i][j] + prev[j];
+                curr[j] = min(upLeft, up);
+            }
+            prev = curr;
+        }
+        long minans = INT_MAX;
+        for(int i = 0; i < prev.size(); i++){
+            minans = min(minans, prev[i]);
+        }
+        return minans;
+    }
+
     int minimumTotal(vector<vector<int>>& triangle) {
         int row = triangle.size();
         int col = triangle[row-1].size();
@@ -55,7 +82,7 @@ public:
         // }
         // return minans;
 
-        //Method 2: Memoization: TC: O(nxm) and SCL O(m) + O(nxm)
+        //Method 2: Memoization: TC: O(nxm) and SCL O(m)[recursion stack] + O(nxm)[dp array]
         // vector<vector<long>>dp(row, vector<long>(col, INT_MAX));
         // long minans = INT_MAX;
         // for(int i = 0; i < col; i++){
@@ -63,6 +90,9 @@ public:
         // }
         // return minans;
 
-        return tabulation(triangle);
+        //Method 3: Tabulation: TC: O(nxm) and SC: O(nxm)
+        //return tabulation(triangle);
+
+        return optimization(triangle);
     }
 };
