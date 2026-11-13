@@ -31,8 +31,8 @@ public:
                     dp[0][0] = triangle[0][0];
                     continue;
                 }
-                int up = INT_MAX;
-                int upLeft = INT_MAX;
+                long up = INT_MAX;
+                long upLeft = INT_MAX;
                 if(j > 0) upLeft = triangle[i][j] + dp[i-1][j-1];
                 if(j < triangle[i-1].size()) up = triangle[i][j] + dp[i-1][j];
                 dp[i][j] = min(upLeft, up);
@@ -75,14 +75,22 @@ public:
     int minimumTotal(vector<vector<int>>& triangle) {
         int row = triangle.size();
         int col = triangle[row-1].size();
-        //Method 1: Recurison: TC: O()
+
+        // Method 1: Recursion
+        // TC: O(2^row)
+        // SC: O(row) [Recursion Stack]
+
         // long minans = INT_MAX;
         // for(int i = 0; i < col; i++){
         //     minans = min(minans, recursion(row-1, i, triangle));
         // }
         // return minans;
 
-        //Method 2: Memoization: TC: O(nxm) and SCL O(m)[recursion stack] + O(nxm)[dp array]
+        // Method 2: Memoization
+        // TC: O(row^2)
+        // SC: O(row^2) [DP Array] + O(row) [Recursion Stack]
+        // Overall SC: O(row^2)
+
         // vector<vector<long>>dp(row, vector<long>(col, INT_MAX));
         // long minans = INT_MAX;
         // for(int i = 0; i < col; i++){
@@ -90,8 +98,15 @@ public:
         // }
         // return minans;
 
-        //Method 3: Tabulation: TC: O(nxm) and SC: O(nxm)
-        //return tabulation(triangle);
+        // Method 3: Tabulation
+        // TC: O(row^2)
+        // SC: O(row^2) [DP Array]
+
+        // return tabulation(triangle);
+
+        // Method 4: Space Optimization
+        // TC: O(row^2)
+        // SC: O(row) [Previous Row + Current Row]
 
         return optimization(triangle);
     }
