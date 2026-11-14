@@ -20,10 +20,14 @@ public:
             int topLeft = 0;
             int top = 0;
             for(int j = 1; j < col; j++){
-                if(j > 0) left = matrix[i][j] + dp[i][j-1];
-                if(i > 0 && j > 0) topLeft = matrix[i][j] + dp[i-1][j-1];
-                if(i > 0) top = matrix[i][j] + dp[i-1][j];
-                dp[i][j] = min(left, min(topLeft, top));
+                if(matrix[i][j] == 1){
+                    left = matrix[i][j] + dp[i][j-1];
+                    topLeft = matrix[i][j] + dp[i-1][j-1];
+                    top = matrix[i][j] + dp[i-1][j];
+                    dp[i][j] = min(left, min(topLeft, top));
+                }else{
+                    dp[i][j] = 0;
+                }
             }
         }
         int totalSqrs = 0;
